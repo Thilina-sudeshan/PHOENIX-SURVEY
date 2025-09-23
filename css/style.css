@@ -343,6 +343,11 @@ a {
     font-weight: 600 !important;
 }
 
+..footertext{
+    color: #e9ecef;
+    font-weight: 300;
+    }
+
 .back-to-top {
     position: fixed;
     display: none;
