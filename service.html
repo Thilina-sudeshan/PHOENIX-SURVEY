@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Phoenix Lanka</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+<style>
+    section {
+        --itemWidth: min(180px, 20vw);
+        height: max-content;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(var(--itemWidth), 1fr));
+        gap: 20px;
+        font-family: 'Averia Serif Libre', sans-serif;
+        padding: 20px;
+        justify-items: center;
+    }
+
+    .item-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .item {
+        width: var(--itemWidth);
+        height: var(--itemWidth);
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; /* Makes image fill full circle */
+        cursor: pointer;
+        box-shadow: 0 0 15px #ddd; /* Subtle shadow for depth */
+        border: 1px solid #ccc; /* Debugging border to identify missing images */
+    }
+
+    .item-name {
+        margin-top: 10px;
+        font-size: calc(var(--itemWidth) / 7);
+        color: #333; /* Dark color for readability */
+        user-select: none;
+    }
+
+    h3 {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Fallback for missing images */
+    .item:not([style*="background-image"]) {
+        background-image: url("https://via.placeholder.com/180?text=Image+Missing");
+    }
+</style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar" role="banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-white mb-0">Phoenix Lanka</a></h1>
+                </div>
+                <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active"><a href="index.html"><span>Home</span></a></li>
+                <li><a href="service.html"><span>Services</span></a></li>
+                  <li><a href="feature.html">Features</a></li>
+                <li class="has-children">
+                  <a href="about.html"><span>Pages</span></a>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="price.html">Terms of Business</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                  </ul>
+                </li>
+                <li><a href="about.html"><span>About</span></a></li>
+                <li><a href="contact.html"><span>Contact</span></a></li>
+              </ul>
+            </nav>
+          </div>
+                <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+                    <a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">Our Services</h6>
+                <h1 class="mb-5">Explore Our Services</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="width:360px; height:240px;">
+                            <img class="img-fluid" src="img/Third Party Inspection.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">Third Party Inspection</h4>
+                        <p>Independent verification to ensure compliance with quality, safety, and industry standards.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="width:360px; height:240px;">
+                            <img class="img-fluid" src="img/Cargo Inspection.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">Cargo Inspection</h4>
+                        <p>Accurate inspection and reporting for cargo quality and quantity before shipment.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="width:360px; height:240px;">
+                            <img class="img-fluid" src="img/Sampling.png" alt="">
+                        </div>
+                        <h4 class="mb-3">Marine Sampling</h4>
+                        <p>Collection of representative samples for accurate analysis and certification.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="width:360px; height:240px;">
+                            <img class="img-fluid" src="img/Pre-shipment Inspection.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">Pre-shipment Inspection</h4>
+                        <p>Ensuring products meet contractual requirements before leaving the port.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="width:360px; height:240px;">
+                            <img class="img-fluid" src="img/LoadingUnloading Supervision.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">Loading/Unloading Supervision</h4>
+                        <p>Monitoring of cargo handling to reduce risks and prevent losses during operations.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="width:360px; height:240px;">
+                            <img class="img-fluid" src="img/Quality & Quantity Certification.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">Quality & Quantity Certification</h4>
+                        <p>Providing internationally recognized certifications for both quality and quantity assurance.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="width:360px; height:240px;">
+                            <img class="img-fluid" src="img/Marine & Draft Survey.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">Marine & Draft Survey</h4>
+                        <p>Specialized surveys to determine cargo weight and vessel draft at ports.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Products Inspected Section Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">Our Expertise</h6>
+                <h1 class="mb-4">Products Regularly Inspected & Surveyed by Us</h1>
+            </div>
+            <div class="row g-4">
+                <section>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/beverage.jpg');"></div>
+                        <p class="item-name">Beverages</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Bulk Organics.jpg');"></div>
+                        <p class="item-name">Bulk Organics</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Coal & Coke.jpg');"></div>
+                        <p class="item-name">Coal & Coke</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Pharmaceuticals.jpg');"></div>
+                        <p class="item-name">Pharmaceuticals</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Dyes.jpg');"></div>
+                        <p class="item-name">Dyes</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Engineering Goods.jpg');"></div>
+                        <p class="item-name">Engineering Goods</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Fertilisers.jpg');"></div>
+                        <p class="item-name">Fertilisers</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Foodstuffs.jpg');"></div>
+                        <p class="item-name">Foodstuffs</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Grains & Cereals.jpg');"></div>
+                        <p class="item-name">Grains & Cereals</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Inorganic Chemicals.jpg');"></div>
+                        <p class="item-name">Inorganic Chemicals</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Metals & Scraps.jpg');"></div>
+                        <p class="item-name">Metals & Scraps</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Minerals.jpg');"></div>
+                        <p class="item-name">Minerals</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Oil Seeds.jpg');"></div>
+                        <p class="item-name">Oil Seeds</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Petroleum.jpg');"></div>
+                        <p class="item-name">Petroleum</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Protein Feeds.jpg');"></div>
+                        <p class="item-name">Protein Feeds</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Vegetable Oils.jpg');"></div>
+                        <p class="item-name">Vegetable Oils</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Containers.jpg');"></div>
+                        <p class="item-name">Containers</p>
+                    </div>
+                    <div class="item-container">
+                        <div class="item" style="background-image: url('img/Pipes & Fittings.jpg');"></div>
+                        <p class="item-name">Pipes & Fittings</p>
+                    </div>
+                </section>
+                <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <p class="mb-0">
+                        In addition to its operation in the above areas, <strong>Phoenix Survey Services Lanka</strong> is constantly striving for self-improvement and finding new avenues.
+                        We are associated with internationally renowned companies and are regularly in touch with each other to develop our standards to the maximum and to offer better services to our valued clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products Inspected Section End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+        <div class="container py-5">
+            <div class="row g-5" style="font-size:14px;">
+                <!-- Column 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>22/1/2 Shruberry Gardens Colombo 04, Sri Lanka</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+94 777 539 076</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>phoenixcargocontrollers@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Services</h4>
+                    <a class="btn btn-link" href="service.html">Third Party Inspection</a>
+                    <a class="btn btn-link" href="service.html">Cargo Inspection</a>
+                    <a class="btn btn-link" href="service.html">Sampling</a>
+                    <a class="btn btn-link" href="service.html">Pre-shipment Inspection</a>
+                    <a class="btn btn-link" href="service.html">Quality & Quantity Certification</a>
+                </div>
+                <!-- Column 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Services</a>
+                    <a class="btn btn-link" href="price.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
